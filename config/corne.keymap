@@ -11,18 +11,18 @@
     behaviors {
         AltLayer1: AltLayer1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "ALTLAYER1";
+            label = "Alt-Layer 1";
             #binding-cells = <0>;
             bindings = <&kp LEFT_ALT>, <&tog 1>;
         };
 
         BackAlt: BackAlt {
             compatible = "zmk,behavior-tap-dance";
-            label = "BACKALT";
+            label = "Backspace-Alt";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LEFT_ALT>;
 
-            tapping-term-ms = <130>;
+            tapping-term-ms = <180>;
         };
     };
 
