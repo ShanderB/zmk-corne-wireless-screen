@@ -21,6 +21,8 @@
             label = "BACKALT";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LEFT_ALT>;
+
+            tapping-term-ms = <500>;
         };
     };
 
