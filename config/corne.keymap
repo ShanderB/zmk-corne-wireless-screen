@@ -13,7 +13,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ALTLAYER1";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&mo 1>;
+            bindings = <&kp LEFT_ALT>, <&tog 1>;
         };
 
         BackAlt: BackAlt {
@@ -22,7 +22,7 @@
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp LEFT_ALT>;
 
-            tapping-term-ms = <500>;
+            tapping-term-ms = <50>;
         };
     };
 
