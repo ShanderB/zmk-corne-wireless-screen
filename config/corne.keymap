@@ -10,13 +10,6 @@
 
 / {
     behaviors {
-        AltLayer1: AltLayer1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Alt-Layer 1";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT>, <&tog 2>;
-        };
-
         BackAlt: BackAlt {
             compatible = "zmk,behavior-tap-dance";
             label = "Backspace-Alt";
@@ -38,10 +31,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E      &kp R      &kp T       &kp Y         &kp U  &kp I       &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F      &kp G       &kp H         &kp J  &kp K       &kp L    &kp SEMI  &kp RET
-&kp LCTRL       &kp Z  &kp X  &kp C      &kp V      &kp B       &kp N         &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp DEL
-                              &kp ENTER  &kp SPACE  &BackAlt    &kp LEFT_GUI  &mo 2  &AltLayer1
+&kp TAB         &kp Q  &kp W  &kp E      &kp R      &kp T       &kp Y         &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F      &kp G       &kp H         &kp J  &kp K      &kp L    &kp SEMI  &kp RET
+&kp LCTRL       &kp Z  &kp X  &kp C      &kp V      &kp B       &kp N         &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                              &kp ENTER  &kp SPACE  &BackAlt    &kp LEFT_GUI  &mo 2  &tog 1
             >;
         };
 
@@ -53,10 +46,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &kp MINUS  &none    &none  &none  &none   &none  &none  &none
-&kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &kp EQUAL  &none    &none  &none  &none   &none  &none  &none
-&kp LSHFT      &none                 &kp APOS               &none  &none      &none    &none  &none  &none   &none  &none  &none
-                                                            &none  &none      &none    &none  &none  &tog 1
+&none          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &kp MINUS  &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp NUMBER_6
+&kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &kp EQUAL  &none    &kp N7        &kp N8        &kp N9        &kp N0        &kp PAGE_UP  &kp PAGE_DOWN
+&kp LSHFT      &none                 &kp APOS               &none  &none      &none    &kp GRAVE     &none         &none         &none         &none        &none
+                                                            &none  &none      &none    &none         &none         &tog 1
             >;
         };
 
