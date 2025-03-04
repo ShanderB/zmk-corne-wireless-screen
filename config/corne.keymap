@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -18,12 +19,19 @@
 
             tapping-term-ms = <160>;
         };
+
+        AltWindow: AltWindow {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ALTWINDOW";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT>, <&kp LEFT_GUI>;
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Basee {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -31,14 +39,16 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E      &kp R      &kp T       &kp Y         &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F      &kp G       &kp H         &kp J  &kp K      &kp L    &kp SEMI  &kp RET
-&kp LCTRL       &kp Z  &kp X  &kp C      &kp V      &kp B       &kp N         &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                              &kp ENTER  &kp SPACE  &BackAlt    &kp LEFT_GUI  &mo 2  &tog 1
+&kp TAB         &kp Q  &kp W  &kp E      &kp R      &kp T       &kp Y       &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F      &kp G       &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp RET
+&kp LCTRL       &kp Z  &kp X  &kp C      &kp V      &kp B       &kp N       &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                              &kp ENTER  &kp SPACE  &BackAlt    &AltWindow  &mo 2  &tog 1
             >;
+
+            label = "Base";
         };
 
-        raise_layer {
+        Prograa {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -51,9 +61,11 @@
 &kp LSHFT      &none                 &kp APOS               &none  &none      &none    &kp GRAVE     &none         &none         &none         &none        &none
                                                             &none  &none      &none    &none         &none         &tog 1
             >;
+
+            label = "Progra";
         };
 
-        lower_layer {
+        Setaa {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -61,11 +73,24 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&none      &none   &none   &none     &none   &none        &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &none   &none
-&kp LSHFT  &none   &none   &none     &none   &none        &none     &none     &none     &none      &none   &bt BT_CLR_ALL
-                           &kp LGUI  &none   &kp SPACE    &kp RET   &tog 2    &kp RALT
+&none  &kp HOME  &kp END   &none      &none  &none    &none  &none   &none  &none  &none  &none
+&none  &kp LEFT  &kp UP    &none      &none  &none    &none  &none   &none  &none  &none  &none
+&none  &none     &kp DOWN  &kp RIGHT  &none  &none    &none  &none   &none  &none  &none  &bt BT_CLR_ALL
+                           &none      &none  &none    &none  &tog 2  &none
             >;
+
+            label = "Seta";
+        };
+
+        Mousee {
+            bindings = <
+&mkp MB2        &none           &tog 3          &none            &msc SCRL_LEFT  &msc SCRL_RIGHT    &none     &none           &mkp MB3        &mkp MB2         &mkp MB1        &trans
+&mkp MB1        &mmv MOVE_LEFT  &mmv MOVE_UP    &msc SCRL_UP     &none           &kp ENTER          &none     &none           &mmv MOVE_UP    &mmv MOVE_RIGHT  &msc SCRL_DOWN  &none
+&msc SCRL_DOWN  &none           &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none           &none              &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &none            &none           &none
+                                                &mkp MB4         &mkp MB3        &mkp MB5           &mkp MB4  &mkp MB5        &msc SCRL_UP
+            >;
+
+            label = "Mouse";
         };
     };
 };
