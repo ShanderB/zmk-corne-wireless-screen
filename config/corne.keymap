@@ -36,11 +36,15 @@
         MouseCombo {
             bindings = <&tog 3>;
             key-positions = <1 2>;
+            timeout-ms = <350>;
+            layers = <0>;
         };
 
         MouseCombo2 {
             bindings = <&tog 3>;
             key-positions = <9 10>;
+            layers = <0>;
+            timeout-ms = <350>;
         };
     };
 
