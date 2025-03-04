@@ -37,13 +37,13 @@
             bindings = <&tog 3>;
             key-positions = <1 2>;
             timeout-ms = <350>;
-            layers = <0>;
+            layers = <0 1 2 3>;
         };
 
         MouseCombo2 {
             bindings = <&tog 3>;
             key-positions = <9 10>;
-            layers = <0>;
+            layers = <0 2 1>;
             timeout-ms = <350>;
         };
     };
