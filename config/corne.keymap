@@ -13,15 +13,6 @@
 
 / {
     behaviors {
-        BackAlt: BackAlt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Backspace-Alt";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp LEFT_ALT>;
-
-            tapping-term-ms = <160>;
-        };
-
         AltWindow: AltWindow {
             compatible = "zmk,behavior-tap-dance";
             label = "ALTWINDOW";
@@ -62,7 +53,7 @@
 &mt ESC TAB     &kp Q  &kp W  &kp E      &kp R      &kp T                     &kp Y       &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F      &kp G                     &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp RET
 &kp LCTRL       &kp Z  &kp X  &kp C      &kp V      &kp B                     &kp N       &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                              &kp ENTER  &kp SPACE  &mt LEFT_ALT BACKSPACE    &AltWindow  &mo 2  &tog 1
+                              &kp ENTER  &kp SPACE  &mt LEFT_ALT BACKSPACE    &AltWindow  &mo 2  &mo 1
             >;
 
             label = "Base";
@@ -76,9 +67,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &kp MINUS  &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp NUMBER_6
-&kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &kp EQUAL  &none    &kp N7        &kp N8        &kp N9        &kp N0        &kp PAGE_UP  &kp PAGE_DOWN
-&kp LSHFT      &none                 &kp APOS               &none  &none      &none    &kp GRAVE     &none         &none         &none         &none        &none
+&none          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &kp MINUS  &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &trans
+&kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none  &kp EQUAL  &none    &kp N6        &kp N7        &kp N8        &kp N9        &kp N0  &kp PAGE_UP
+&kp LSHFT      &none                 &kp APOS               &none  &none      &none    &kp GRAVE     &none         &none         &none         &none   &kp PAGE_DOWN
                                                             &none  &none      &none    &none         &none         &tog 1
             >;
 
