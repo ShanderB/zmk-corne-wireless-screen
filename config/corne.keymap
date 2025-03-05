@@ -28,7 +28,7 @@
 
         MouseCombo {
             bindings = <&tog 3>;
-            key-positions = <1 2>;
+            key-positions = <2 3>;
             timeout-ms = <350>;
             layers = <0 1 2 3>;
         };
