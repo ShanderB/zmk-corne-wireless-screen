@@ -94,10 +94,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp HOME  &kp UP_ARROW  &kp END          &none  &kp C_VOLUME_UP      &kp C_VOLUME_UP    &none           &none           &none            &none  &none
-&none  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &none  &kp C_VOLUME_DOWN    &kp C_VOLUME_DOWN  &none           &kp UP_ARROW    &kp RIGHT_ARROW  &none  &none
-&none  &none     &none         &none            &none  &none                &none              &kp LEFT_ARROW  &kp DOWN_ARROW  &none            &none  &none
-                               &none            &none  &none                &bt BT_CLR_ALL     &none           &none
+&trans  &kp HOME  &kp UP_ARROW  &kp END          &none  &kp C_VOLUME_UP      &kp C_VOLUME_UP    &none           &none           &none            &none  &trans
+&none   &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &none  &kp C_VOLUME_DOWN    &kp C_VOLUME_DOWN  &none           &kp UP_ARROW    &kp RIGHT_ARROW  &none  &trans
+&none   &none     &none         &none            &none  &none                &none              &kp LEFT_ARROW  &kp DOWN_ARROW  &none            &none  &trans
+                                &none            &none  &none                &bt BT_CLR_ALL     &none           &none
             >;
 
             label = "Seta";
