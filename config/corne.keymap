@@ -22,11 +22,11 @@
             bindings = <&kp LEFT_ALT>, <&kp LEFT_GUI>;
         };
 
-        ShiftArrow: ShiftArrow {
+        BArrow: BArrow {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFTARROW";
+            label = "BARROW";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&mo 2>;
+            bindings = <&kp B>, <&mo 2>;
         };
 
         TabEsc: TabEsc {
@@ -69,10 +69,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&TabEsc      &kp Q  &kp W  &kp E      &kp R      &kp T                     &kp Y       &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&ShiftArrow  &kp A  &kp S  &kp D      &kp F      &kp G                     &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp RET
-&kp LCTRL    &kp Z  &kp X  &kp C      &kp V      &kp B                     &kp N       &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                           &kp ENTER  &kp SPACE  &mt LEFT_ALT BACKSPACE    &AltWindow  &mo 1  &mo 2
+&TabEsc         &kp Q  &kp W  &kp E      &kp R      &kp T                     &kp Y       &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D      &kp F      &kp G                     &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp RET
+&kp LCTRL       &kp Z  &kp X  &kp C      &kp V      &BArrow                   &kp N       &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
+                              &kp ENTER  &kp SPACE  &mt LEFT_ALT BACKSPACE    &AltWindow  &mo 1  &mo 2
             >;
 
             label = "Base";
