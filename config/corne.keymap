@@ -64,6 +64,32 @@
         };
     };
 
+    macros {
+        bluetooth_macro1: bluetooth_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &kp F24>, <&macro_tap>;
+
+            label = "BLUETOOTH_MACRO";
+        };
+
+        bluetooth_macro2: bluetooth_macro2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &kp F24>, <&macro_tap>;
+
+            label = "BLUETOOTH_MACRO2";
+        };
+
+        bluetooth_macro3: bluetooth_macro3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2 &kp F24>, <&macro_tap>;
+
+            label = "BLUETOOTH_MACRO3";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         wakeup-source;
@@ -132,10 +158,10 @@
 
         Function {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none             &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &none
-&none  &none         &none         &none         &none  &none             &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &none
-&none  &none         &none         &none         &none  &tog 4            &kp F11  &kp F12  &none   &none   &none    &none
-                                   &none         &none  &bt BT_CLR_ALL    &none    &none    &none
+&none  &bluetooth_macro1  &bluetooth_macro2  &bluetooth_macro3  &none  &none             &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &none
+&none  &none              &none              &none              &none  &none             &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &none
+&none  &none              &none              &none              &none  &tog 4            &kp F11  &kp F12  &none   &none   &none    &none
+                                             &none              &none  &bt BT_CLR_ALL    &none    &none    &none
             >;
 
             label = "Functionn";
