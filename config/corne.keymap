@@ -79,7 +79,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap_time 50>,
+                <&macro_tap_time 300>,
                 <&kp LEFT_GUI &kp LEFT_SHIFT &kp S>;
 
             label = "PRINTSCREEN";
