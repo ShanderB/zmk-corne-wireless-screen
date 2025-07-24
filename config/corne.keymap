@@ -44,6 +44,20 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 5>;
         };
+
+        PrintScreen: PrintScreen {
+            compatible = "zmk,behavior-tap-dance";
+            label = "PRINTSCREEN";
+            #binding-cells = <0>;
+            bindings =
+                <&kt LEFT_GUI>,
+                <&kt LEFT_SHIFT>,
+                <&kp S>,
+                <&kt LEFT_GUI>,
+                <&kt LEFT_SHIFT>;
+
+            tapping-term-ms = <50>;
+        };
     };
 
     combos {
@@ -89,7 +103,7 @@
             label = "BLUETOOTH_MACRO3";
         };
 
-        PrintScreen: PrintScreen {
+        DisabledPrintScreen: PrintScreen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
