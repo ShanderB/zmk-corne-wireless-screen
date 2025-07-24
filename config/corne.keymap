@@ -92,9 +92,10 @@
         PrintScreen: PrintScreen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp S>, <&macro_tap>;
+            bindings = <&kp LEFT_GUI &kp LEFT_SHIFT &kp S>, <&macro_press>;
 
             label = "PRINTSCREEN";
+            wait-ms = <50>;
         };
     };
 
