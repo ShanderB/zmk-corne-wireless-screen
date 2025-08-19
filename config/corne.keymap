@@ -82,6 +82,13 @@
 
             label = "PRINTSCREEN";
         };
+
+        AccessTCS: AccessTCS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp B &kp A &kp NUMBER_0 &kp K &kp C &kp I &kp TAB &kp S &kp A &kp AT_SIGN &kp B &kp T &kp H &kp EXCLAMATION &kp EXCLAMATION &kp TAB &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp N7 &kp N8>;
+            label = "ACCESSTCS";
+        };
     };
 
     keymap {
@@ -154,7 +161,7 @@
             bindings = <
 &none         &bluetooth_macro 0  &bluetooth_macro 1  &bluetooth_macro 2  &none  &none             &kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &none
 &PrintScreen  &none               &none               &none               &none  &none             &kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &none
-&none         &none               &none               &none               &none  &tog 4            &kp F11  &kp F12  &none   &none   &none    &none
+&none         &none               &AccessTCS          &none               &none  &tog 4            &kp F11  &kp F12  &none   &none   &none    &none
                                                       &none               &none  &bt BT_CLR_ALL    &none    &none    &none
             >;
 
