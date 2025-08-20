@@ -85,7 +85,10 @@
         PrintScreen: PrintScreen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_GUI &sk LEFT_SHIFT &kp S>, <&macro_release>;
+            bindings =
+                <&sk LEFT_GUI &sk LEFT_SHIFT &kp S>,
+                <&macro_release>,
+                <&tog 3>;
 
             label = "PRINTSCREEN";
         };
