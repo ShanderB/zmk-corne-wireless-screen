@@ -95,7 +95,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp S &kp B &kp A &kp NUMBER_0 &kp K &kp C &kp I &kp TAB &Pass>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 200>,
                 <&kp TAB &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp N7 &kp N8>;
 
             label = "ACCESSTCS";
