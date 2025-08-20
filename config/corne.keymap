@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TCS";
             #binding-cells = <0>;
-            bindings = <&Bios>, <&Pass>, <&AccessTCS>;
+            bindings = <&Pass>, <&VDI>;
         };
     };
 
@@ -90,7 +90,7 @@
             label = "PRINTSCREEN";
         };
 
-        AccessTCS: AccessTCS {
+        VDI: AccessTCS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp S &kp B &kp A &kp NUMBER_0 &kp K &kp C &kp I &kp TAB &Pass &kp TAB &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp N7 &kp N8>;
@@ -100,15 +100,8 @@
         Pass: Pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp A &kp AT_SIGN &kp B &kp T &kp H &kp KP_NUMBER_0 &kp EXCLAMATION &kp EXCLAMATION>;
+            bindings = <&kp S &kp A &kp AT_SIGN &kp B &kp T &kp H &kp N0 &kp EXCLAMATION &kp EXCLAMATION>;
             label = "PASS";
-        };
-
-        Bios: Bios {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp N7 &kp N8 &kp N9>;
-            label = "BIOS";
         };
     };
 
