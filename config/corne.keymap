@@ -95,14 +95,14 @@
         VDI: AccessTCS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp B &kp A &kp NUMBER_0 &kp K &kp C &kp I &kp TAB &kp S &kp A &kp AT &kp B &kp T &kp H &kp N0 &kp EXCL &kp EXCL &kp TAB &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp N7 &kp N8>;
+            bindings = <&kp S &kp B &kp A &kp NUMBER_0 &kp K &kp C &kp I &kp TAB &kp S &kp A &kp AT &kp B &kp T &kp H &kp N0 &kp EXCL &kp EXCL &kp EXCLAMATION &kp TAB &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp N7 &kp N8>;
             label = "ACCESSTCS";
         };
 
         Pass: Pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp A &kp AT_SIGN &kp B &kp T &kp H &kp N0 &kp EXCLAMATION &kp EXCLAMATION>;
+            bindings = <&kp S &kp A &kp AT_SIGN &kp B &kp T &kp H &kp N0 &kp EXCLAMATION &kp EXCLAMATION &kp EXCLAMATION>;
             label = "PASS";
         };
     };
