@@ -105,6 +105,20 @@
             bindings = <&kp S &kp A &kp AT_SIGN &kp B &kp T &kp H &kp N0 &kp EXCLAMATION &kp EXCLAMATION &kp EXCLAMATION>;
             label = "PASS";
         };
+
+        CedilhaResolverProblemaUbuntuL: CedilhaResolverProblemaUbuntu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N9)>;
+            label = "CEDILHARESOLVERPROBLEMAUBUNTU";
+        };
+
+        CedilhaResolverProblemaUbuntuR: CedilhaResolverProblemaUbuntuR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N0)>;
+            label = "CEDILHARESOLVERPROBLEMAUBUNTUR";
+        };
     };
 
     keymap {
@@ -136,10 +150,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &kp MINUS  &none           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &trans
-&trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none          &kp EQUAL  &none           &kp N6        &kp N7        &kp N8        &kp N9        &kp N0  &kp PAGE_UP
-&trans  &none                 &kp APOS               &none          &none      &Layer4orDRG    &kp GRAVE     &none         &none         &none         &none   &kp PAGE_DOWN
-                                                     &none          &none      &none           &none         &none         &none
+&trans  &CedilhaResolverProblemaUbuntuL  &CedilhaResolverProblemaUbuntuR  &kp BACKSLASH  &kp MINUS  &none           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &trans
+&trans  &kp LEFT_BRACKET                 &kp RIGHT_BRACKET                &none          &kp EQUAL  &none           &kp N6        &kp N7        &kp N8        &kp N9        &kp N0  &kp PAGE_UP
+&trans  &none                            &kp APOS                         &none          &none      &Layer4orDRG    &kp GRAVE     &none         &none         &none         &none   &kp PAGE_DOWN
+                                                                          &none          &none      &none           &none         &none         &none
             >;
 
             label = "Progra";
