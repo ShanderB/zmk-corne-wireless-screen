@@ -19,8 +19,8 @@
 #
 ---
 include:
-  - board: nrfmicro/nrf52840
+  - board: nrfmicro/nrf52840/flipped
     shield: corne_left
-  - board: nrfmicro/nrf52840
+  - board: nrfmicro/nrf52840/flipped
     shield: corne_right
     # nice_view_adapter nice_view
