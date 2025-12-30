@@ -19,8 +19,8 @@
 #
 ---
 include:
-  - board: nice_nano
+  - board: nrfmicro/nrf52840
     shield: corne_left
-  - board: nice_nano
+  - board: nrfmicro/nrf52840
     shield: corne_right
     # nice_view_adapter nice_view
