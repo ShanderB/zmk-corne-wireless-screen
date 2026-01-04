@@ -20,9 +20,7 @@
 ---
 include:
   - board: nice_nano
-    shield: corne_left
-    snippet: zmk-usb-logging
+    shield: settings_reset
   - board: nice_nano
-    shield: corne_right
-    snippet: zmk-usb-logging
-    # nice_view_adapter nice_view
+    shield: settings_reset
+ # nice_view_adapter nice_view
