@@ -11,8 +11,6 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 3500
 
-#define PASS_KEYS &kp S &kp A &kp AT_SIGN &kp B &kp T &kp H &kp N0 &kp EXCLAMATION &kp EXCLAMATION &kp EXCLAMATION
-
 &mmv { time-to-max-speed-ms = <600>; };
 
 / {
@@ -104,7 +102,7 @@
         Pass: Pass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <PASS_KEYS>;
+            bindings = <&kp S &kp A &kp AT_SIGN &kp B &kp T &kp H &kp N0 &kp EXCLAMATION &kp EXCLAMATION &kp EXCLAMATION>;
             label = "PASS";
         };
     };
