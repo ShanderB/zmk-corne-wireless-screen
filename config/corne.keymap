@@ -97,7 +97,7 @@
         VDI: AccessTCS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp B &kp A &kp NUMBER_0 &kp K &kp C &kp I &kp TAB PASS_KEYS &kp EXCLAMATION &kp EXCLAMATION &kp EXCLAMATION &kp TAB &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp N7 &kp N8>;
+            bindings = <&kp S &kp B &kp A &kp NUMBER_0 &kp K &kp C &kp I &kp TAB PASS_KEYS &kp EXCLAMATION &kp EXCLAMATION &kp EXCLAMATION &kp EXCLAMATION &kp EXCLAMATION &kp TAB &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp N5 &kp NUMBER_6 &kp N7 &kp N8>;
             label = "ACCESSTCS";
         };
 
@@ -111,7 +111,7 @@
         LogarTCS: LogarTCS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N2  &kp N8  &kp N4  &kp N9  &kp N5  &kp N0  &kp N8 &kp AT_SIGN  &kp T  &kp C  &kp S  &kp DOT  &kp C  &kp O  &kp M &kp TAB PASS_KEYS &kp BACKSPACE>;
+            bindings = <&kp N2 &kp N8 &kp N4 &kp N9 &kp N5 &kp N0 &kp N8 &kp AT_SIGN &kp T &kp C &kp S &kp DOT &kp C &kp O &kp M &kp TAB PASS_KEYS &kp BACKSPACE>;
         };
     };
 
@@ -128,7 +128,7 @@
 
             bindings = <
 &TabEsc         &kp Q  &kp W  &kp E        &kp R      &kp T                     &kp Y       &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&sk LEFT_SHIFT  &kp A  &kp S  &kp D        &kp F      &kp G                     &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp RET
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D        &kp F      &kp G                     &kp H       &kp J  &kp K      &kp L    &kp SEMI  &kp RET
 &kp LCTRL       &kp Z  &kp X  &kp C        &kp V      &kp B                     &kp N       &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
                               &EnterArrow  &kp SPACE  &mt LEFT_ALT BACKSPACE    &AltWindow  &mo 1  &mo 2
             >;
